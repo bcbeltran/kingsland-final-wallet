@@ -1,0 +1,25 @@
+.tx-data {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 255, 255, 0.7);
+    text-align: center;
+    font-size: 20px;
+    border-radius: 5px;
+    padding: 5px;
+    border: 1px dashed white;
+}
+
+.tx-data-fail {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 0, 0, 0.7);
+    text-align: center;
+    font-size: 20px;
+    border-radius: 5px;
+    padding: 5px;
+    border: 1px dashed white;
+}

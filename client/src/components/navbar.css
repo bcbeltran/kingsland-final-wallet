@@ -1,0 +1,23 @@
+.home {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: fixed;
+    top: 5px;
+    left: 0;
+    width: 100vw;
+}
+
+.home-link {
+    font-family: monospace;
+    font-size: 18px;
+    margin: 5px;
+    padding: 0 20px;
+    text-decoration: none;
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    border: 1px solid aqua;
+    box-shadow: 3px 3px aqua;
+}

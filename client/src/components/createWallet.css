@@ -1,0 +1,27 @@
+.wallet {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+h2 {
+  font-family: monospace;
+  font-size: 44px;
+  text-decoration: underline;
+  text-decoration-color: black;
+  text-decoration-thickness: 2px;
+  margin: 20px 0;
+  -webkit-text-stroke: .3px aqua;
+  color: black;
+}
+
+h4 {
+    background-color: white;
+    text-align: center;
+    width: 350px;
+    overflow-wrap: break-word;
+    border-radius: 5px;
+    padding: 5px;
+}

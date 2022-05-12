@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Moonrocks&display=swap');
+
+input {
+    border-radius: 5px;
+    padding: 10px;
+    width: 60%;
+}
+
+.formInput {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Rubik Moonrocks', cursive;
+    font-size: 35px;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px;
+    -webkit-text-stroke: 0.3px black;
+}
+
+span {
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 12px;
+    font-weight: bolder;
+    color: red;
+    background-color: whitesmoke;
+    width: 50%;
+    padding: 2px;
+    border-radius: 5px;
+    display: none;
+}
+
+input:invalid[focused="true"] ~ span {
+    display: block;
+}
+
+input:invalid[focused="true"] {
+    border: 1px solid red;
+}

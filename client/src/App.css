@@ -1,0 +1,39 @@
+.app {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  padding: 20px;
+  background: url('./images/full\ moon.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+form {
+  text-align: center;
+  margin: 20px;
+  padding: 0px 60px;
+}
+
+button {
+  font-family: monospace;
+  font-size: 20px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border: none;
+  border-radius: 5px;
+  margin: 20px 0 10px 0;
+  padding: 10px;
+  width: 80%;
+  cursor: pointer;
+}
+
+h1 {
+  font-family: monospace;
+  font-size: 66px;
+  text-decoration: underline;
+  text-decoration-color: black;
+  text-decoration-thickness: 2px;
+  margin: 20px 0;
+  -webkit-text-stroke: .3px aqua;
+  color: black;
+}

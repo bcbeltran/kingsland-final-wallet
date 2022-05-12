@@ -1,0 +1,19 @@
+.home-container {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.link {
+    font-family: monospace;
+    font-size: 22px;
+    padding: 20px;
+    margin: 40px;
+    text-decoration: none;
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    border: 1px solid aqua;
+    box-shadow: 5px 5px aqua;
+}
