@@ -3,17 +3,15 @@ import {useNavigate} from 'react-router-dom';
 import Navbar from './Navbar'
 import FormInput from './FormInput';
 import './faucet.css';
+const crypto = require('crypto');
 
 const Faucet = () => {
 	const navigate = useNavigate();
-	const wallet = JSON.parse(window.localStorage.getItem("wallet"));
   const [values, setValues] = useState({
 		from: "1xK7eymyzVwdRkE3G7XUJFbzwMCpCMsFX",
 		to: "",
 		value: 100,
 		data: "Faucet transaction",
-		signingKey:
-			"2cc3417983838a6056069b652f8e6e09609baaa8fd5daa794a38061087102bb5",
   });
   const [txData, setTxData] = useState({
 		message: "",
@@ -28,14 +26,32 @@ const Faucet = () => {
 			placeholder: "To",
 			errorMessage: "Must be a valid address.",
 			label: "To",
-			pattern: `^(?:[13]{1}[a-km-zA-HJ-NP-Z1-9]{26,33}|bc1[a-z0-9]{39,59})$`,
+			pattern: `[a-f0-9]{40}(:.+)?$`,
 			required: true,
 		},
   ];
 
   const handleSubmit = (e) => {
 		e.preventDefault();
-		let data = values;
+		let data = {
+			...values,
+			fee: 0,
+			dateCreated: new Date().toISOString(),
+			senderPubKey: '00000000',
+		};
+
+		let transactionJsonData = JSON.stringify(data);
+		transactionJsonData.split(" ").join();
+		var txHash = crypto
+			.createHash("sha256")
+			.update(transactionJsonData)
+			.digest();
+
+		data = {
+			...data,
+			transactionDataHash: txHash.toString("hex"),
+			senderSignature: ['00000000', '00000000'],
+		};
 
 		fetch("http://localhost:3001/transaction/broadcast", {
 			method: "POST",
@@ -50,7 +66,10 @@ const Faucet = () => {
 				setTxData({ message, txDataHash });
 				navigate("/faucet");
 			})
-			.catch((err) => console.log(err));
+			.catch((err) => {
+				setTxData({message: 'Transaction Failed', txDataHash: err.toString()});
+				return;
+			});
   };
 
   const onChange = (e) => {
@@ -58,16 +77,24 @@ const Faucet = () => {
   };
 
   return (
-		<div className="faucet-container">
+		<div>
 			<Navbar />
-			{txData.txDataHash === "" ? (
-				""
-			) : (
+			{txData.message === "Transaction Failed" ? (
+				<div className="tx-data-fail">
+					{txData.message}
+					<br></br>
+					{txData.txDataHash}
+				</div>
+			) : txData.message !== "" ? (
 				<div className="tx-data">
 					{txData.message}
 					<br></br>
+					100 Burbcoin were sent to: {values.to}
+					<br></br>
 					Tx Hash: {txData.txDataHash}
 				</div>
+			) : (
+				""
 			)}
 			<form onSubmit={handleSubmit}>
 				<h1>Faucet</h1>

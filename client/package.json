@@ -7,11 +7,15 @@
 		"@testing-library/react": "^13.2.0",
 		"@testing-library/user-event": "^13.5.0",
 		"coinkey": "^3.0.0",
+		"ecdsa": "^0.7.0",
 		"elliptic": "^6.5.4",
 		"react": "^18.1.0",
 		"react-dom": "^18.1.0",
 		"react-router-dom": "^6.3.0",
 		"react-scripts": "5.0.1",
+		"ripemd160": "^2.0.2",
+		"secp256k1": "^4.0.3",
+		"secure-random": "^1.1.2",
 		"web-vitals": "^2.1.4"
 	},
 	"scripts": {

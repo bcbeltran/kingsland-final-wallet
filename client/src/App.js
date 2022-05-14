@@ -6,7 +6,6 @@ import CreateWallet from "./components/CreateWallet";
 import CreateTransaction from "./components/CreateTransaction";
 import Faucet from "./components/Faucet";
 import ErrorPage from "./components/ErrorPage";
-import LocalWallet from "./components/LocalWallet";
 
 function App() {
 	return (
