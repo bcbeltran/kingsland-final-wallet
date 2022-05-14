@@ -77,7 +77,7 @@ const Faucet = () => {
   };
 
   return (
-		<div>
+		<div className='faucet-container'>
 			<Navbar />
 			{txData.message === "Transaction Failed" ? (
 				<div className="tx-data-fail">

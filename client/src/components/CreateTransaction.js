@@ -136,14 +136,14 @@ const CreateTransaction = () => {
 			.catch((err) => {
 				setTxData({ message: "Transaction Failed", txDataHash: err.toString() });
 			});
-  };;
+  };
 
   const onChange = (e) => {
 		setValues({ ...values, [e.target.name]: e.target.value });
   };
 
   return (
-		<div>
+		<div className='create-transaction-container'>
 			<Navbar />
 			{txData.message === "Transaction Failed" ? (
 				<div className="tx-data-fail">

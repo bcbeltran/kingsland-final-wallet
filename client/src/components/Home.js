@@ -1,6 +1,6 @@
 import React from 'react'
 import {Link} from 'react-router-dom';
-import './homePage.css';
+import './home.css';
 
 const Home = () => {
   const wallet = JSON.parse(window.localStorage.getItem("wallet"));
@@ -9,6 +9,14 @@ const Home = () => {
 			<Link className="link" to="/create-wallet">
 				{wallet ? "DELETE WALLET" : "CREATE WALLET"}
 			</Link>
+			{wallet && 
+			<Link className='link' to='/get-balance'>
+				GET BALANCES
+			</Link>}
+			{wallet &&
+			<Link className='link' to='/get-transactions'>
+				GET TRANSACTIONS
+			</Link>}
 			{!wallet ? (
 				""
 			) : (

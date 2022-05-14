@@ -1,9 +1,10 @@
 .wallet {
-    text-align: center;
     display: flex;
+    text-align: center;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
+    height: 100vh;
 }
 
 h2 {
@@ -20,7 +21,7 @@ h2 {
 h4 {
     background-color: white;
     text-align: center;
-    width: 350px;
+    width: 90%;
     overflow-wrap: break-word;
     border-radius: 5px;
     padding: 5px;

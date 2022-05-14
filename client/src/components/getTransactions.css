@@ -1,0 +1,65 @@
+.everything {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 50px;
+    height: 100vh;
+}
+
+.transaction-box {
+    color: whitesmoke;
+    font-family: monospace;
+    font-size: 20px;
+    padding: 10px;
+    margin: 20px 0;
+    background-color: black;
+    border-radius: 5px;
+    border: 1px solid aqua;
+    box-shadow: 5px 5px aqua;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 20px 0;
+}
+
+.h3 {
+    color: whitesmoke;
+    font-family: monospace;
+    font-size: 20px;
+    padding: 10px;
+    margin: 20px 0;
+    background-color: black;
+    border-radius: 5px;
+    border: 1px solid aqua;
+    box-shadow: 5px 5px aqua;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 20px 0;
+}
+
+.h3 span {
+    display: inline;
+    color: aqua;
+    font-family: monospace;
+    font-size: 28px;
+    padding: 0;
+    margin: 0;
+    background-color: rgba(0,0,0,0);
+}
+
+
+.transaction-container {
+    overflow-wrap: break-word;
+    color: whitesmoke;
+    font-family: monospace;
+    font-size: 20px;
+    padding: 10px;
+    margin: 20px 0;
+    background-color: black;
+    border-radius: 5px;
+    border: 1px solid aqua;
+    box-shadow: 5px 5px aqua;
+}
+
+.transaction-container p {
+    margin: 5px;
+}

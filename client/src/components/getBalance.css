@@ -1,0 +1,29 @@
+.balance-container {
+    display: flex;
+    color: whitesmoke;
+    font-family: monospace;
+    font-size: 20px;
+    padding: 20px;
+    margin: 40px;
+    background-color: black;
+    border-radius: 5px;
+    border: 1px solid aqua;
+    box-shadow: 5px 5px aqua;
+}
+
+.balance-container span {
+    display: inline;
+    color: aqua;
+    font-family: monospace;
+    font-size: 28px;
+    padding: 0;
+    margin: 0;
+    background-color: black;
+}
+
+.balance-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}

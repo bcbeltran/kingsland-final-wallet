@@ -6,6 +6,8 @@ import CreateWallet from "./components/CreateWallet";
 import CreateTransaction from "./components/CreateTransaction";
 import Faucet from "./components/Faucet";
 import ErrorPage from "./components/ErrorPage";
+import GetBalance from "./components/GetBalance";
+import GetTransactions from "./components/GetTransactions";
 
 function App() {
 	return (
@@ -13,12 +15,14 @@ function App() {
     <div className="app">
       <Routes>
         <Route path='/' element={<Home />} />
+        <Route path='/get-balance' element={<GetBalance />} />
+        <Route path='/get-transactions' element={<GetTransactions />} />
         <Route path='/create-wallet' element={<CreateWallet />} />
         <Route path='/create-transaction' element={<CreateTransaction />} />
         <Route path='/faucet' element={<Faucet />} />
         <Route path='*' element={<ErrorPage/>} />
       </Routes>
-    <Footer />
+      <Footer />
     </div>
     </Router>
 	);

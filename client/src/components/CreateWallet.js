@@ -29,11 +29,8 @@ const CreateWallet = () => {
 				senderPubKey: Buffer.from(publicKey).toString('hex'),
 				publicAddress: publicAddress,
 			};
-			console.log(publicKey);
 
 			window.localStorage.setItem("wallet", JSON.stringify(newWallet));
-
-			console.log(newWallet.publicKey);
 		
 			alert(`This is your new wallet. WRITE DOWN YOUR PRIVATE KEY AND NEVER SHARE IT!!!!!
 			Private key: ${newWallet.privateKey.toString('hex')}
@@ -49,23 +46,23 @@ const CreateWallet = () => {
 		};
 
 		return (
-			<div>
+			<div className='wallet'>
 				<Navbar />
 			{wallet
 			?
 			(
-			<div className='wallet'>
+			<>
 			<h2>You have created a wallet: </h2>
 			<h4>Public Address: {wallet.publicAddress}</h4>
 			<button onClick={handleDeleteWallet}>Delete Wallet?</button>
-			</div>
+			</>
 			) 
 			:
 			(
-			<div className='wallet'>
+			<>
 				<h1>Create Wallet</h1>
 				<button onClick={handleCreateWallet}>Create Wallet</button>
-			</div>
+			</>
 			
 			)
 			
